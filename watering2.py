@@ -1,8 +1,6 @@
 import numpy as np
 import skfuzzy as fuzz
 from skfuzzy import control as ctrl
-from tkinter import *
-from tkinter import messagebox
 
 import pandas as pd
 import numpy as np
