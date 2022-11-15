@@ -68,12 +68,12 @@ water_ctrl1 = ctrl.ControlSystem(
 water = ctrl.ControlSystemSimulation(water_ctrl1)
 
 
-humid = st.number_input('Enter user humid', min_value=1, max_value=101)
+humid = st.number_input('ENTER HUMIDITY', min_value=1, max_value=101)
 water.input['humidity_type'] = (humid)
 
 
 last_water = st.number_input(
-    'Enter user last watering time', min_value=1, max_value=14)
+    'ENTER LAST TIME WATERING', min_value=1, max_value=14)
 water.input['last_watering'] = (last_water)
 
 water.input['humidity_type'] = (humid)
