@@ -81,6 +81,6 @@ water.input['last_watering'] = (last_water)
 
 
 water.compute()
-if st.button("watering time"):
+if st.button("CALCULATE WATERING TIME):
 
     st.write(water.output['watering_time'])
