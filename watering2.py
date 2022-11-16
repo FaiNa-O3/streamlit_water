@@ -187,7 +187,8 @@ water_ctrl1 = ctrl.ControlSystem(
      #rule46, rule47, rule48, rule49, rule50, rule51, rule52, rule53, rule54,
      #rule55, rule56, rule57, rule58, rule59, rule60, rule61, rule62, rule63, 
      #rule64, rule65, rule66, rule67, rule68, rule69, rule70, rule71, rule72, 
-     rule73, rule74, rule75, rule76, rule77, rule78, rule79, rule80, rule81
+     #rule73, rule74, rule75, rule76, rule77, rule78, rule79, rule80, 
+     rule81
 ])
 
 water = ctrl.ControlSystemSimulation(water_ctrl1)
