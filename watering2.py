@@ -22,7 +22,7 @@ last_watering = ctrl.Antecedent(np.arange(0, 14, 1), 'last_watering')
 
 
 # output
-watering_time = ctrl.Consequent(np.arange(1, 70, 1), 'watering_time')
+watering_time = ctrl.Consequent(np.arange(1, 20, 1), 'watering_time')
 
 #===============================================================================================================================================#
 # input ==== membership value
@@ -49,9 +49,9 @@ last_watering['long'] = fuzz.trapmf(last_watering.universe, [7, 10, 14, 14])
 
 # output ==== membership value
 #watering_time['Short'] = fuzz.trapmf(watering_time.universe, [1, 1, 5, 10])
-watering_time['Short'] = fuzz.trimf(watering_time.universe, [1, 10, 20])
-watering_time['Medium'] = fuzz.trimf(watering_time.universe, [20, 30, 40])
-watering_time['Long'] = fuzz.trimf(watering_time.universe, [40, 50, 60])
+watering_time['Short'] = fuzz.trimf(watering_time.universe, [1, 5, 10])
+watering_time['Medium'] = fuzz.trimf(watering_time.universe, [5, 10, 15])
+watering_time['Long'] = fuzz.trimf(watering_time.universe, [10, 15, 20])
 #watering_time['Long'] = fuzz.trapmf(watering_time.universe, [70, 80, 90, 120])
 
 #===============================================================================================================================================#
@@ -189,7 +189,7 @@ water_ctrl1 = ctrl.ControlSystem(
 water = ctrl.ControlSystemSimulation(water_ctrl1)
 #===============================================================================================================================================#
 
-humid = st.number_input('ENTER HUMIDITY', min_value=1, max_value=101)
+humid = st.number_input('ENTER HUMIDITY', min_value=1, max_value=100)
 water.input['humidity_type'] = (humid)
 
 sunshine = st.number_input('ENTER SUNSHINE HOUR', min_value=1, max_value=12)
