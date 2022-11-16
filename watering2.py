@@ -189,19 +189,19 @@ water_ctrl1 = ctrl.ControlSystem(
 water = ctrl.ControlSystemSimulation(water_ctrl1)
 #===============================================================================================================================================#
 
-humid = st.number_input('ENTER HUMIDITY', min_value=0, max_value=100)
+humid = st.number_input('ENTER HUMIDITY 0-100%', min_value=0, max_value=100)
 water.input['humidity_type'] = (humid)
 
-sunshine = st.number_input('ENTER SUNSHINE HOUR', min_value=0, max_value=12)
+sunshine = st.number_input('ENTER SUNSHINE HOUR 0-12 HOURS', min_value=0, max_value=12)
 water.input['sunshine_hour'] = (sunshine)
 
-radiation = st.number_input('ENTER SUN RADIATION', min_value=0, max_value=1600)
+radiation = st.number_input('ENTER SUN RADIATION 0-1600', min_value=0, max_value=1600)
 water.input['sun_radiation'] = (radiation)
 
-evaporation = st.number_input('ENTER DELTA EVAPORATION', min_value=0, max_value=6)
+evaporation = st.number_input('ENTER DELTA EVAPORATION 0-6MM', min_value=0, max_value=6)
 water.input['delta_evaporation'] = (evaporation)
 
-last_water = st.number_input('ENTER LAST WATERING TIME', min_value=0, max_value=14)
+last_water = st.number_input('ENTER LAST WATERING TIME 0-14 DAYS', min_value=0, max_value=14)
 water.input['last_watering'] = (last_water)
 
 
