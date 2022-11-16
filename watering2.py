@@ -193,7 +193,7 @@ water = ctrl.ControlSystemSimulation(water_ctrl1)
 humid = st.number_input('ENTER HUMIDITY 1-100%', min_value=1, max_value=100)
 water.input['humidity_type'] = (humid)
 
-sunshine = st.number_input('ENTER SUNSHINE HOUR 1-12 hours', min_value=1, max_value=14)
+sunshine = st.number_input('ENTER SUNSHINE HOUR 1-12 hours', min_value=1, max_value=12)
 water.input['sunshine_hour'] = (sunshine)
 
 radiation = st.number_input('ENTER SUN RADIATION 1-1600', min_value=1, max_value=1600)
