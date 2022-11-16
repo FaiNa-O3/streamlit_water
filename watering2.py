@@ -87,11 +87,11 @@ rule19 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_rad
 rule20 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['short'], watering_time['Short'])
 rule21 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['short'], watering_time['Short'])
 
-rule22 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['short'], watering_time['Short'])
+rule22 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['short'], watering_time['Medium'])
 rule23 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['short'], watering_time['Short'])
 rule24 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['short'], watering_time['Short'])
 
-rule25 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['short'], watering_time['Short'])
+rule25 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['short'], watering_time['Medium'])
 rule26 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['short'], watering_time['Short'])
 rule27 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['short'], watering_time['Short'])
 
@@ -102,93 +102,92 @@ rule28 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_rad
 rule29 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['small']|last_watering['medium'], watering_time['Short'])
 rule30 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['small']|last_watering['medium'], watering_time['Short'])
 
-rule31 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['small']|last_watering['medium'], watering_time['Short'])
+rule31 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['small']|last_watering['medium'], watering_time['Medium'])
 rule32 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['small']|last_watering['medium'], watering_time['Short'])
 rule33 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['small']|last_watering['medium'], watering_time['Short'])
 
-rule34 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['small']|last_watering['medium'], watering_time['Short'])
-rule35 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['small']|last_watering['medium'], watering_time['Short'])
+rule34 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['small']|last_watering['medium'], watering_time['Medium'])
+rule35 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['small']|last_watering['medium'], watering_time['Medium'])
 rule36 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['small']|last_watering['medium'], watering_time['Short'])
 
 
-rule37 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
+rule37 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Medium'])
 rule38 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
 rule39 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
 
 rule40 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Long'])
-rule41 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
+rule41 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Medium'])
 rule42 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
 
 rule43 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Long'])
-rule44 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
+rule44 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Medium'])
 rule45 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
 
 
-rule46 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Short'])
-rule47 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Short'])
+rule46 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Medium'])
+rule47 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Medium'])
 rule48 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Short'])
 
 rule49 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Long'])
 rule50 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Long'])
-rule51 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Short'])
+rule51 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Medium'])
 
 rule52 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Long'])
 rule53 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Long'])
-rule54 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Short'])
+rule54 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['medium'], watering_time['Medium'])
 
 
 
 
 rule55 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['small']|last_watering['long'], watering_time['Long'])
-rule56 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['small']|last_watering['long'], watering_time['Short'])
+rule56 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['small']|last_watering['long'], watering_time['Medium'])
 rule57 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['small']|last_watering['long'], watering_time['Short'])
 
 rule58 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['small']|last_watering['long'], watering_time['Long'])
 rule59 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['small']|last_watering['long'], watering_time['Long'])
-rule60 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['small']|last_watering['long'], watering_time['Short'])
+rule60 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['small']|last_watering['long'], watering_time['Medium'])
 
 rule61 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['small']|last_watering['long'], watering_time['VeryLong'])
 rule62 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['small']|last_watering['long'], watering_time['Long'])
-rule63 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['small']|last_watering['long'], watering_time['Short'])
+rule63 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['small']|last_watering['long'], watering_time['Medium'])
 
 
-rule64 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['long'], watering_time['Long'])
+rule64 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['long'], watering_time['VeryLong'])
 rule65 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['long'], watering_time['Long'])
-rule66 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['long'], watering_time['Short'])
+rule66 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['long'], watering_time['Medium'])
 
 rule67 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['long'], watering_time['VeryLong'])
 rule68 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['long'], watering_time['Long'])
-rule69 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['long'], watering_time['Short'])
+rule69 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['long'], watering_time['Medium'])
 
 rule70 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['medium']|last_watering['long'], watering_time['VeryLong'])
 rule71 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['medium']|last_watering['long'], watering_time['Long'])
-rule72 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['medium']|last_watering['long'], watering_time['Short'])
+rule72 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['medium']|last_watering['long'], watering_time['Medium'])
 
 
-rule73 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['long'], watering_time['Long'])
+rule73 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['long'], watering_time['VeryLong'])
 rule74 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['long'], watering_time['Long'])
-rule75 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['long'], watering_time['Short'])
+rule75 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['large']|last_watering['long'], watering_time['Long'])
 
 rule76 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['long'], watering_time['VeryLong'])
 rule77 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['long'], watering_time['Long'])
-rule78 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['long'], watering_time['Short'])
+rule78 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['large']|last_watering['long'], watering_time['Medium'])
 
 rule79 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['long'], watering_time['VeryLong'])
 rule80 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['long'], watering_time['VeryLong'])
-rule81 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['long'], watering_time['Short'])
+rule81 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['large']|last_watering['long'], watering_time['Medium'])
 
 #===============================================================================================================================================#
 water_ctrl1 = ctrl.ControlSystem(
     [rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9, 
      rule10, rule11, rule12, rule13, rule14, rule15, rule16, rule17, rule18,
      rule19, rule20, rule21, rule22, rule23, rule24, rule25, rule26, rule27, 
-     #rule28, rule29, rule30, rule31, rule32, rule33, rule34, rule35, rule36,
-     #rule37, rule38, rule39, rule40, rule41, rule42, rule43, rule44, rule45,
-     #rule46, rule47, rule48, rule49, rule50, rule51, rule52, rule53, rule54,
-     #rule55, rule56, rule57, rule58, rule59, rule60, rule61, rule62, rule63, 
-     #rule64, rule65, rule66, rule67, rule68, rule69, rule70, rule71, rule72, 
-     #rule73, rule74, rule75, rule76, rule77, rule78, rule79, rule80, 
-     rule81
+     rule28, rule29, rule30, rule31, rule32, rule33, rule34, rule35, rule36,
+     rule37, rule38, rule39, rule40, rule41, rule42, rule43, rule44, rule45,
+     rule46, rule47, rule48, rule49, rule50, rule51, rule52, rule53, rule54,
+     rule55, rule56, rule57, rule58, rule59, rule60, rule61, rule62, rule63, 
+     rule64, rule65, rule66, rule67, rule68, rule69, rule70, rule71, rule72, 
+     rule73, rule74, rule75, rule76, rule77, rule78, rule79, rule80, rule81
 ])
 
 water = ctrl.ControlSystemSimulation(water_ctrl1)
