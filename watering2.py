@@ -14,7 +14,7 @@ st.title('WATERING TIME USING FUZZY LOGIC')
 
 #===============================================================================================================================================#
 # input
-humidity_type = ctrl.Antecedent(np.arange(0, 101, 1), 'humidity_type')
+humidity_type = ctrl.Antecedent(np.arange(0, 100, 1), 'humidity_type')
 sunshine_hour = ctrl.Antecedent(np.arange(0, 12, 1), 'sunshine_hour')
 sun_radiation = ctrl.Antecedent(np.arange(0, 1600, 1), 'sun_radiation')
 delta_evaporation = ctrl.Antecedent(np.arange(0, 7, 1), 'delta_evaporation')
@@ -22,7 +22,7 @@ last_watering = ctrl.Antecedent(np.arange(0, 15, 1), 'last_watering')
 
 
 # output
-watering_time = ctrl.Consequent(np.arange(1, 120, 1), 'watering_time')
+watering_time = ctrl.Consequent(np.arange(1, 100, 1), 'watering_time')
 
 #===============================================================================================================================================#
 # input ==== membership value
@@ -30,15 +30,15 @@ humidity_type['dry'] = fuzz.trapmf(humidity_type.universe, [1, 1, 25, 50])
 humidity_type['moist'] = fuzz.trimf(humidity_type.universe, [25, 50, 75])
 humidity_type['wet'] = fuzz.trapmf(humidity_type.universe, [50, 75, 100, 100])
 
-sunshine_hour['short'] = fuzz.trapmf(sunshine_hour.universe, [0,0,2,6])
+sunshine_hour['short'] = fuzz.trapmf(sunshine_hour.universe, [1,1,2,6])
 sunshine_hour['medium'] = fuzz.trimf(sunshine_hour.universe, [2,6,10])
-sunshine_hour['long'] = fuzz.trapmf(sunshine_hour.universe, [6,10,14,14])
+sunshine_hour['long'] = fuzz.trapmf(sunshine_hour.universe, [6,10,12,12])
 
-sun_radiation['light'] = fuzz.trapmf(sun_radiation.universe, [0,0,400,800])
+sun_radiation['light'] = fuzz.trapmf(sun_radiation.universe, [1,1,400,800])
 sun_radiation['medium'] = fuzz.trimf(sun_radiation.universe, [400,800,1200])
 sun_radiation['heavy'] = fuzz.trapmf(sun_radiation.universe, [800,1200,1600,1600])
 
-delta_evaporation['small'] = fuzz.trapmf(delta_evaporation.universe, [0,0,1,3])
+delta_evaporation['small'] = fuzz.trapmf(delta_evaporation.universe, [1,1,1,3])
 delta_evaporation['medium'] = fuzz.trimf(delta_evaporation.universe, [1,3,5])
 delta_evaporation['large'] = fuzz.trapmf(delta_evaporation.universe, [3,5,6,6])
 
@@ -52,7 +52,7 @@ watering_time['VeryShort'] = fuzz.trapmf(watering_time.universe, [1, 1, 5, 10])
 watering_time['Short'] = fuzz.trimf(watering_time.universe, [10, 20, 30])
 watering_time['Medium'] = fuzz.trimf(watering_time.universe, [30, 40, 50])
 watering_time['Long'] = fuzz.trimf(watering_time.universe, [50, 60, 70])
-watering_time['VeryLong'] = fuzz.trapmf(watering_time.universe, [70, 80, 90, 120])
+watering_time['VeryLong'] = fuzz.trapmf(watering_time.universe, [70, 80, 90, 100])
 
 #===============================================================================================================================================#
 # rules
@@ -190,7 +190,7 @@ water_ctrl1 = ctrl.ControlSystem(
 water = ctrl.ControlSystemSimulation(water_ctrl1)
 #===============================================================================================================================================#
 
-humid = st.number_input('ENTER HUMIDITY 1-100%', min_value=1, max_value=101)
+humid = st.number_input('ENTER HUMIDITY 1-100%', min_value=1, max_value=100)
 water.input['humidity_type'] = (humid)
 
 sunshine = st.number_input('ENTER SUNSHINE HOUR 1-12 hours', min_value=1, max_value=14)
@@ -199,7 +199,7 @@ water.input['sunshine_hour'] = (sunshine)
 radiation = st.number_input('ENTER SUN RADIATION 1-1600', min_value=1, max_value=1600)
 water.input['sun_radiation'] = (radiation)
 
-evaporation = st.number_input('ENTER DELTA EVAPORATION 1-6 mm', min_value=1, max_value=10)
+evaporation = st.number_input('ENTER DELTA EVAPORATION 1-6 mm', min_value=1, max_value=6)
 water.input['delta_evaporation'] = (evaporation)
 
 last_water = st.number_input('ENTER LAST WATERING TIME 1-14 days', min_value=1, max_value=14)
