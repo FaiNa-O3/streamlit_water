@@ -78,11 +78,11 @@ rule9 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radia
 
 rule37 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
 rule38 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
-rule39 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
+rule39 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['short'] | sun_radiation ['light'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['VeryShort'])
 
 rule40 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Medium'])
-rule41 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Medium'])
-rule42 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
+rule41 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Short'])
+rule42 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['medium'] | sun_radiation ['medium'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['VeryShort'])
 
 rule43 = ctrl.Rule(humidity_type['dry']      | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Long'])
 rule44 = ctrl.Rule(humidity_type['moist']    | sunshine_hour ['long'] | sun_radiation ['heavy'] |delta_evaporation ['medium']|last_watering['medium'], watering_time['Medium'])
