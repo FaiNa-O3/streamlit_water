@@ -22,7 +22,7 @@ last_watering = ctrl.Antecedent(np.arange(0, 14, 1), 'last_watering')
 
 
 # output
-watering_time = ctrl.Consequent(np.arange(0, 90, 1), 'watering_time')
+watering_time = ctrl.Consequent(np.arange(1, 90, 1), 'watering_time')
 
 #===============================================================================================================================================#
 # input ==== membership value
@@ -179,11 +179,12 @@ rule81 = ctrl.Rule(humidity_type['wet']      | sunshine_hour ['long'] | sun_radi
 
 #===============================================================================================================================================#
 water_ctrl1 = ctrl.ControlSystem(
-    [rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9, rule10, rule11, rule12, rule13, rule14, rule15, rule16, rule17, rule18,
-    rule19, rule20, rule21, rule22, rule23, rule24, rule25, rule26, rule27, rule28, rule29, rule30, rule31, rule32, rule33, rule34, rule35, 
-    rule36, rule37, rule38, rule39, rule40, rule41, rule42, rule43, rule44, rule45, rule46, rule47, rule48, rule49, rule50, rule51, rule52, 
-    rule53, rule54, rule55, rule56, rule57, rule58, rule59, rule60, rule61, rule62, rule63, rule64, rule65, rule66, rule67, rule68, rule69, 
-    rule70, rule71, rule72, rule73, rule74, rule75, rule76, rule77, rule78, rule79, rule80, rule81
+    [rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9, 
+     #rule10, rule11, rule12, rule13, rule14, rule15, rule16, rule17, rule18,
+    #rule19, rule20, rule21, rule22, rule23, rule24, rule25, rule26, rule27, rule28, rule29, rule30, rule31, rule32, rule33, rule34, rule35, 
+    #rule36, rule37, rule38, rule39, rule40, rule41, rule42, rule43, rule44, rule45, rule46, rule47, rule48, rule49, rule50, rule51, rule52, 
+    #rule53, rule54, rule55, rule56, rule57, rule58, rule59, rule60, rule61, rule62, rule63, rule64, rule65, rule66, rule67, rule68, rule69, 
+    #rule70, rule71, rule72, rule73, rule74, rule75, rule76, rule77, rule78, rule79, rule80, rule81
 ])
 
 water = ctrl.ControlSystemSimulation(water_ctrl1)
